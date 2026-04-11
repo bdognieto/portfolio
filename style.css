@@ -16,3 +16,6 @@ nav a {
   text-align: center;
   text-decoration: none;
 }
+nav a.current {
+  font-weight: bold;
+}
