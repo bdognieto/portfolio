@@ -10,12 +10,16 @@ body {
 }
 nav {
   display: flex;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #ccc;
 }
 nav a {
   flex: 1;
   text-align: center;
   text-decoration: none;
+  padding: 0.5rem;
+  color: black;
 }
 nav a.current {
-  font-weight: bold;
+  border-bottom: 0.4em solid #555;
 }
