@@ -5,17 +5,26 @@ body {
   padding: 1rem;
 }
 
-label,
-input,
-textarea,
-button {
+form {
+  width: 100%;
+}
+
+form label {
+  display: block;
+  margin-block: 0.5rem;
+}
+
+form input,
+form textarea,
+form button {
   display: block;
   width: 100%;
   box-sizing: border-box;
+  font: inherit;
 }
 
-label {
-  margin-block: 0.5rem;
+form button {
+  margin-top: 1rem;
 }
 
 nav {
