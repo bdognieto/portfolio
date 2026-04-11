@@ -8,3 +8,11 @@ body {
   margin: 0 auto;
   padding: 1rem;
 }
+nav {
+  display: flex;
+}
+nav a {
+  flex: 1;
+  text-align: center;
+  text-decoration: none;
+}
