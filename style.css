@@ -26,6 +26,6 @@ nav a.current {
 }
 
 nav a:hover {
-  background-color: #c7d9f6;  /* blue background */         /* text turns white */
+  background-color: #dae7fa;
   border-bottom: 0.4em solid #3b82f6;  /* keep underline */
 }
