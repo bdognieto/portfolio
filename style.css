@@ -23,3 +23,6 @@ nav a {
 nav a.current {
   border-bottom: 0.4em solid #555;
 }
+nav a:hover {
+  border-bottom: 0.4em solid #3b82f6;  /* blue on hover */
+}
