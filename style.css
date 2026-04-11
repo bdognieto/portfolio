@@ -5,6 +5,12 @@ body {
   padding: 1rem;
 }
 
+input,
+textarea,
+button {
+  font: inherit;
+}
+
 nav {
   display: flex;
   margin-bottom: 2rem;
