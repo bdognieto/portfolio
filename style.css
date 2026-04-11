@@ -1,18 +1,16 @@
 body {
-  /* Set line height to 1.5 times the font size
-	   and use the OS’s UI font as the website font
-	 */
   font: 100%/1.5 system-ui;
-
   max-width: 80ch;
   margin: 0 auto;
   padding: 1rem;
 }
+
 nav {
   display: flex;
   margin-bottom: 2rem;
   border-bottom: 1px solid #ccc;
 }
+
 nav a {
   flex: 1;
   text-align: center;
@@ -20,14 +18,11 @@ nav a {
   padding: 0.5rem;
   color: black;
 }
+
 nav a.current {
   border-bottom: 0.4em solid #555;
 }
 
 nav a:hover {
-  border-bottom: 0.4em solid #3b82f6;
-}
-
-nav a.current:hover {
   border-bottom: 0.4em solid #3b82f6;
 }
