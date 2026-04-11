@@ -17,6 +17,7 @@ nav a {
   text-decoration: none;
   padding: 0.5rem;
   color: black;
+  display: block;
 }
 
 nav a.current {
