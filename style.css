@@ -112,3 +112,10 @@ nav a:hover {
 .resume time {
   color: #555;
 }
+
+.color-scheme {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 80%;
+}
