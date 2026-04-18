@@ -72,3 +72,25 @@ if ('colorScheme' in localStorage) {
   document.documentElement.style.setProperty('color-scheme', saved);
   select.value = saved;
 }
+
+let form = document.querySelector('form');
+
+form?.addEventListener('submit', function (event) {
+  event.preventDefault(); // stop default behavior
+
+  let data = new FormData(form);
+
+  let url = form.action + '?';
+
+  let params = [];
+
+  for (let [name, value] of data) {
+    let encoded = encodeURIComponent(value);
+    params.push(`${name}=${encoded}`);
+  }
+
+  url += params.join('&');
+
+  // open the email client
+  location.href = url;
+});
