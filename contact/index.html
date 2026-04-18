@@ -6,26 +6,26 @@
   <title>Contact</title>
   <link rel="stylesheet" href="../style.css">
 </head>
+
 <body>
   <h1>Contact</h1>
 
-  <form action="mailto:brandonmnieto7@gmail.com" method="POST" enctype="text/plain">
-  <label>
-    Email:
-    <input type="email" name="email">
-  </label>
+  <form action="mailto:brandonmnieto7@gmail.com">
+    
+    <label>
+      Subject:
+      <input name="subject" required>
+    </label>
 
-  <label>
-    Subject:
-    <input name="subject">
-  </label>
+    <label>
+      Message:
+      <textarea name="body" required></textarea>
+    </label>
 
-  <label>
-    Message:
-    <textarea name="body"></textarea>
-  </label>
+    <button type="submit">Send</button>
 
-  <button>Send</button>
+  </form>
 
   <script type="module" src="../global.js"></script>
-</form>
+</body>
+</html>

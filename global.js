@@ -60,15 +60,12 @@ let select = document.querySelector('.color-scheme select');
 
 select.addEventListener('input', function (event) {
   const value = event.target.value;
-
   document.documentElement.style.setProperty('color-scheme', value);
-
   localStorage.colorScheme = value;
 });
 
 if ('colorScheme' in localStorage) {
   const saved = localStorage.colorScheme;
-
   document.documentElement.style.setProperty('color-scheme', saved);
   select.value = saved;
 }
@@ -76,21 +73,16 @@ if ('colorScheme' in localStorage) {
 let form = document.querySelector('form');
 
 form?.addEventListener('submit', function (event) {
-  event.preventDefault(); // stop default behavior
+  event.preventDefault();
 
   let data = new FormData(form);
-
   let url = form.action + '?';
-
   let params = [];
 
   for (let [name, value] of data) {
-    let encoded = encodeURIComponent(value);
-    params.push(`${name}=${encoded}`);
+    params.push(`${name}=${encodeURIComponent(value)}`);
   }
 
   url += params.join('&');
-
-  // open the email client
   location.href = url;
 });
