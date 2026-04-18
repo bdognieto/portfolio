@@ -1,3 +1,7 @@
+html {
+  color-scheme: light dark;
+}
+
 body {
   font: 100%/1.5 system-ui;
   max-width: 80ch;
@@ -38,8 +42,9 @@ form button {
 nav {
   display: flex;
   margin-bottom: 2rem;
-  border-bottom: 1px solid #ccc;
   align-items: stretch;
+  --border-color: oklch(50% 10% 200 / 40%);
+  border-bottom: 1px solid var(--border-color);
 }
 
 nav a {
@@ -47,17 +52,17 @@ nav a {
   text-align: center;
   text-decoration: none;
   padding: 0.5rem;
-  color: black;
+  color: inherit;
   display: block;
 }
 
 nav a.current {
-  border-bottom: 0.4em solid #555;
+  border-bottom: 0.4em solid var(--border-color);
 }
 
 nav a:hover {
-  background-color: #dae7fa;
-  border-bottom: 0.4em solid #3b82f6;  /* keep underline */
+  background-color: color-mix(in oklch, #3b82f6, canvas 85%);
+  border-bottom: 0.4em solid #3b82f6;
 }
 
 .projects {
