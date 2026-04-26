@@ -1,62 +1,86 @@
 [
-    {
-        "title": "Test project title.",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, amet? Quae, est! Vel nulla, molestiae aspernatur ipsa asperiores atque inventore illo tenetur voluptatem nam modi id nisi aliquam. Amet, enim."
-    },
-    {
-        "title": "Nulla unde laborum maxime!",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Obcaecati minima esse accusamus magnam autem vel possimus, fuga consequatur provident consectetur molestiae cumque sit non porro repellat assumenda ipsum! Sit, corrupti repudiandae in eum culpa odio rem cum a!"
-    },
-    {
-        "title": "Dolorem in unde obcaecati.",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Distinctio a vel sapiente, beatae debitis eos libero pariatur saepe tempora enim voluptatem temporibus. Voluptatum iure, dolore animi explicabo facilis soluta atque laboriosam nam vitae est at molestiae, expedita ut."
-    },
-    {
-        "title": "Ullam sint architecto fugiat?",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Exercitationem a recusandae quasi fuga tempore temporibus molestiae! Suscipit accusantium ullam numquam eos in tempore vero quaerat, sapiente consectetur ipsa, consequuntur labore exercitationem deserunt soluta fugit quis modi, accusamus nemo!"
-    },
-    {
-        "title": "Exercitationem, temporibus provident. Doloremque.",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Corrupti, error officiis accusamus excepturi sapiente dolores, esse obcaecati harum eveniet provident recusandae, inventore quisquam qui dicta voluptates molestias. Velit provident nostrum facere. Harum, nobis nesciunt adipisci sequi accusamus rem."
-    },
-    {
-        "title": "Reprehenderit reiciendis facilis natus!",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Voluptatum quia consequuntur facere nesciunt totam placeat sint eum assumenda nam molestiae id magnam iste provident nihil eligendi minus natus cum suscipit quidem, culpa aut voluptate beatae vitae possimus. Quibusdam?"
-    },
-    {
-        "title": "Laudantium corrupti ratione excepturi.",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Expedita veritatis consequatur neque non placeat nostrum sunt illum quibusdam nisi, dolorum ad voluptates deleniti consequuntur praesentium repellendus eius ex, dolores eligendi ab facere aliquid magni sapiente animi? Numquam, doloribus?"
-    },
-    {
-        "title": "Aliquam sunt consectetur rerum!",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Necessitatibus aspernatur aut debitis dicta alias laudantium excepturi, soluta error voluptatem? Aut sint quis culpa. Ipsa id in veniam quae possimus autem nostrum quam. Similique quas omnis ducimus totam tempora!"
-    },
-    {
-        "title": "Eaque ipsa qui possimus!",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Similique adipisci, natus neque tempore esse amet aliquam, nesciunt quidem blanditiis laudantium illo, veniam nulla quibusdam nobis necessitatibus voluptatum error? Ea nemo id minima in necessitatibus praesentium. Tempora, consequuntur consequatur."
-    },
-    {
-        "title": "Ipsam cupiditate consectetur qui?",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Aspernatur similique sapiente aliquid soluta eveniet ullam delectus fugiat fuga numquam ratione sint corrupti ad provident perspiciatis atque totam magni, quos a quaerat veritatis? Odio neque ad deserunt tenetur voluptatum."
-    },
-    {
-        "title": "Libero ipsam aliquid necessitatibus?",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Ad necessitatibus alias fuga eum accusamus maiores exercitationem nostrum magnam voluptatum suscipit dolor veniam aut cum dolores ut voluptatem similique sequi nihil odit sunt, sint repudiandae at? Esse, fuga voluptatibus."
-    },
-    {
-        "title": "Temporibus autem hic quos!",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Veniam delectus, ea suscipit nihil asperiores exercitationem eum, provident quae in sunt consequuntur! Nobis, nihil provident doloremque impedit quisquam iure quaerat. Minima, fugiat tempore accusamus quo sit dignissimos. Voluptate, suscipit!"
-    }
+  {
+    "title": "DSC80 Power Outages Project",
+    "year": 2026,
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Analyzed US power outage data and built predictive models."
+  },
+  {
+    "title": "COGS 108 Group Project",
+    "year": 2025,
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Exploratory data analysis and hypothesis testing."
+  },
+  {
+    "title": "Placeholder Project 1",
+    "year": 2024,
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Lorem ipsum placeholder."
+  },
+  {
+    "title": "Placeholder Project 2",
+    "year": 2023,
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Lorem ipsum placeholder."
+  }, 
+  {
+    "title": "Placeholder Project 3",
+    "year": 2025,
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Lorem ipsum placeholder."
+  },
+  {
+    "title": "Placeholder Project 4",
+    "year": 2023,
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Lorem ipsum placeholder."
+  }, 
+  {
+    "title": "Placeholder Project 5",
+    "year": 2022,
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Lorem ipsum placeholder."
+  }, 
+  {
+    "title": "Placeholder Project 6",
+    "year": 2026,
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Lorem ipsum placeholder."
+  }, 
+  {
+    "title": "Placeholder Project 7",
+    "year": 2024,
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Lorem ipsum placeholder."
+  }, 
+  {
+    "title": "Placeholder Project 8",
+    "year": 2023,
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Lorem ipsum placeholder."
+  }, 
+  {
+    "title": "Placeholder Project 9",
+    "year": 2025,
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Lorem ipsum placeholder."
+  }, 
+  {
+    "title": "Placeholder Project 10",
+    "year": 2024,
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Lorem ipsum placeholder."
+  }, 
+  {
+    "title": "Placeholder Project 11",
+    "year": 2022,
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Lorem ipsum placeholder."
+  }, 
+  {
+    "title": "Placeholder Project 12",
+    "year": 2025,
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Lorem ipsum placeholder."
+  }
 ]
