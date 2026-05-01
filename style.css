@@ -143,7 +143,8 @@ nav a:hover {
   border-radius: 8px;
 
   /* 👇 THIS centers and controls width */
-  max-width: 500px;
+  min-width: 250px;
+  max-width: 100%;
 
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
@@ -171,7 +172,8 @@ nav a:hover {
 
 .pie-container {
   display: flex;
-  align-items: center;   /* vertically aligns legend with chart */
-  gap: 2rem;             /* space between pie and legend */
+  align-items: center;
+  gap: 2rem;
   margin: 2rem 0;
+  flex-wrap: wrap;
 }
