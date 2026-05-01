@@ -134,6 +134,7 @@ nav a:hover {
 }
 
 .legend {
+  flex: 1;
   list-style: none;
   padding: 0.75rem 1rem;
   margin: 1.5rem auto;
@@ -166,4 +167,11 @@ nav a:hover {
   border-radius: 50%;
   display: inline-block;
   flex-shrink: 0;
+}
+
+.pie-container {
+  display: flex;
+  align-items: center;   /* vertically aligns legend with chart */
+  gap: 2rem;             /* space between pie and legend */
+  margin: 2rem 0;
 }
