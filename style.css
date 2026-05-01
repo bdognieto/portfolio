@@ -119,3 +119,10 @@ nav a:hover {
   right: 1rem;
   font-size: 80%;
 }
+
+.project-year {
+  color: gray;
+  font-family: Baskerville, serif;
+  font-variant-numeric: oldstyle-nums;
+  font-style: italic;
+}

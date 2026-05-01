@@ -101,6 +101,10 @@ export async function fetchJSON(url) {
   }
 }
 
+export async function fetchGithubData(username) {
+  return fetchJSON(`https://api.github.com/users/${username}`);
+}
+
 export function renderProjects(projects, containerElement, headingLevel = 'h2') {
   // stop if the container does not exist
   if (!containerElement) {
@@ -121,15 +125,14 @@ export function renderProjects(projects, containerElement, headingLevel = 'h2') 
     const article = document.createElement('article');
 
     article.innerHTML = `
-      <${headingLevel}>${project.title}</${headingLevel}>
-      <img src="${project.image}" alt="${project.title}">
+    <${headingLevel}>${project.title}</${headingLevel}>
+    <img src="${project.image}" alt="${project.title}">
+    <div>
       <p>${project.description}</p>
+      <p class="project-year">c. ${project.year}</p>
+    </div>
     `;
 
     containerElement.appendChild(article);
   }
-}
-
-export async function fetchGithubData(username) {
-  return fetchJSON(`https://api.github.com/users/${username}`);
 }
