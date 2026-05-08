@@ -11,6 +11,8 @@ renderProjects(projects, projectsContainer, 'h2');
 const count = projects.length;
 title.textContent = `Projects (${count})`;
 
+let selectedIndex = -1;
+
 function renderPieChart(projectsGiven) {
 
   // roll up data
@@ -40,28 +42,48 @@ function renderPieChart(projectsGiven) {
   let colors = d3.scaleOrdinal(d3.schemeTableau10);
 
   // draw pie
+  let svg = d3.select('#projects-pie-plot');
+
   arcs.forEach((arc, idx) => {
-    d3.select('#projects-pie-plot')
+    svg
       .append('path')
       .attr('d', arc)
-      .attr('fill', colors(idx));
+      .attr('fill', colors(idx))
+      .attr('class', idx === selectedIndex ? 'selected' : '')
+      .on('click', () => {
+        selectedIndex = selectedIndex === idx ? -1 : idx;
+
+        let filteredProjects = projects;
+
+        if (selectedIndex !== -1) {
+          let selectedYear = data[selectedIndex].label;
+          filteredProjects = projects.filter(project => project.year == selectedYear);
+        }
+
+        renderProjects(filteredProjects, projectsContainer, 'h2');
+        renderPieChart(filteredProjects);
+      });
   });
 
   // legend
   let legend = d3.select('.legend');
 
   data.forEach((d, idx) => {
-    legend.append('li')
+    legend
+      .append('li')
       .attr('style', `--color:${colors(idx)}`)
+      .attr('class', idx === selectedIndex ? 'selected' : '')
       .html(`<span class="swatch"></span> ${d.label} <em>(${d.value})</em>`);
   });
 }
+
 renderPieChart(projects);
 let query = '';
 let searchInput = document.querySelector('.searchBar');
 
 searchInput.addEventListener('input', (event) => {
   query = event.target.value.toLowerCase();
+  selectedIndex = -1;
 
   let filteredProjects = projects.filter(project => {
     let values = Object.values(project).join('\n').toLowerCase();
