@@ -242,6 +242,12 @@ dl.info {
   grid-template-columns: auto 1fr;
   gap: 0.25em 1em;
   margin: 0;
+  transition: opacity 500ms, visibility 500ms;
+}
+
+dl.info[hidden] {
+  opacity: 0;
+  visibility: hidden;
 }
 
 dl.info dt {
