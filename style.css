@@ -227,3 +227,12 @@ path {
   font-weight: bold;
   margin: 0;
 }
+
+.gridlines line {
+  stroke: #ddd;
+  stroke-opacity: 0.6;
+}
+
+.gridlines path {
+  display: none;
+}

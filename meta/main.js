@@ -69,6 +69,17 @@ function renderScatterPlot(data, commits) {
   const width = 1000;
   const height = 600;
 
+  const margin = { top: 10, right: 10, bottom: 30, left: 40 };
+
+  const usableArea = {
+    top: margin.top,
+    right: width - margin.right,
+    bottom: height - margin.bottom,
+    left: margin.left,
+    width: width - margin.left - margin.right,
+    height: height - margin.top - margin.bottom,
+  };
+
   const svg = d3
     .select('#chart')
     .append('svg')
@@ -78,13 +89,24 @@ function renderScatterPlot(data, commits) {
   const xScale = d3
     .scaleTime()
     .domain(d3.extent(commits, d => d.datetime))
-    .range([0, width])
+    .range([usableArea.left, usableArea.right])
     .nice();
 
-  const yScale = d3.scaleLinear().domain([0, 24]).range([height, 0]);
+  const yScale = d3
+    .scaleLinear()
+    .domain([0, 24])
+    .range([usableArea.bottom, usableArea.top]);
 
-  xScale.range([usableArea.left, usableArea.right]);
-  yScale.range([usableArea.bottom, usableArea.top]);
+  const gridlines = svg
+    .append('g')
+    .attr('class', 'gridlines')
+    .attr('transform', `translate(${usableArea.left}, 0)`);
+
+  gridlines.call(
+    d3.axisLeft(yScale)
+      .tickFormat('')
+      .tickSize(-usableArea.width)
+  );
 
   const dots = svg.append('g').attr('class', 'dots');
 
@@ -96,17 +118,6 @@ function renderScatterPlot(data, commits) {
     .attr('cy', d => yScale(d.hourFrac))
     .attr('r', 5)
     .attr('fill', 'steelblue');
-
-  const margin = { top: 10, right: 10, bottom: 30, left: 40 };
-
-  const usableArea = {
-    top: margin.top,
-    right: width - margin.right,
-    bottom: height - margin.bottom,
-    left: margin.left,
-    width: width - margin.left - margin.right,
-    height: height - margin.top - margin.bottom,
-  };
 
   const xAxis = d3.axisBottom(xScale);
 
