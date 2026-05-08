@@ -177,3 +177,20 @@ nav a:hover {
   margin: 2rem 0;
   flex-wrap: wrap;
 }
+
+.searchBar {
+  width: 60%;
+  max-width: 600px;
+  display: block;
+  margin: 25px auto;
+  padding: 14px 18px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  outline: none;
+}
+
+.searchBar:focus {
+  border-color: #4a90e2;
+  box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+}
