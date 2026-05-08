@@ -11,40 +11,66 @@ renderProjects(projects, projectsContainer, 'h2');
 const count = projects.length;
 title.textContent = `Projects (${count})`;
 
-// Pie chart code starts here
-let rolledData = d3.rollups(
-  projects,
-  (v) => v.length,
-  (d) => d.year
-);
+function renderPieChart(projectsGiven) {
 
-let data = rolledData.map(([year, count]) => {
-  return { value: count, label: year };
-});
+  // roll up data
+  let rolledData = d3.rollups(
+    projectsGiven,
+    (v) => v.length,
+    (d) => d.year
+  );
 
-let arcGenerator = d3.arc()
-  .innerRadius(0)
-  .outerRadius(50);
+  let data = rolledData.map(([year, count]) => {
+    return { value: count, label: year };
+  });
 
-let sliceGenerator = d3.pie().value(d => d.value);
-let arcData = sliceGenerator(data);
+  // CLEAR OLD PIE CHART
+  d3.select('#projects-pie-plot').selectAll('path').remove();
+  d3.select('.legend').selectAll('li').remove();
 
-let arcs = arcData.map((d) => arcGenerator(d));
+  // generators
+  let arcGenerator = d3.arc()
+    .innerRadius(0)
+    .outerRadius(50);
 
-let colors = d3.scaleOrdinal(d3.schemeTableau10);
+  let sliceGenerator = d3.pie().value(d => d.value);
+  let arcData = sliceGenerator(data);
+  let arcs = arcData.map(d => arcGenerator(d));
 
-arcs.forEach((arc, idx) => {
-  d3.select('#projects-pie-plot')
-    .append('path')
-    .attr('d', arc)
-    .attr('fill', colors(idx));
-});
+  let colors = d3.scaleOrdinal(d3.schemeTableau10);
 
-let legend = d3.select('.legend');
+  // draw pie
+  arcs.forEach((arc, idx) => {
+    d3.select('#projects-pie-plot')
+      .append('path')
+      .attr('d', arc)
+      .attr('fill', colors(idx));
+  });
 
-data.forEach((d, idx) => {
-  legend
-    .append('li')
-    .attr('style', `--color:${colors(idx)}`)
-    .html(`<span class="swatch"></span> ${d.label} <em>(${d.value})</em>`);
+  // legend
+  let legend = d3.select('.legend');
+
+  data.forEach((d, idx) => {
+    legend.append('li')
+      .attr('style', `--color:${colors(idx)}`)
+      .html(`<span class="swatch"></span> ${d.label} <em>(${d.value})</em>`);
+  });
+}
+renderPieChart(projects);
+let query = '';
+let searchInput = document.querySelector('.searchBar');
+
+searchInput.addEventListener('input', (event) => {
+  query = event.target.value.toLowerCase();
+
+  let filteredProjects = projects.filter(project => {
+    let values = Object.values(project).join('\n').toLowerCase();
+    return values.includes(query);
+  });
+
+  // update project list
+  renderProjects(filteredProjects, projectsContainer, 'h2');
+
+  // update pie chart
+  renderPieChart(filteredProjects);
 });
