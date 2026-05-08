@@ -210,3 +210,20 @@ path {
 .selected:is(path) {
   fill: var(--color);
 }
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(6, auto);
+  gap: 1rem 2rem;
+}
+
+.stats dt {
+  font-size: 0.8rem;
+  color: gray;
+}
+
+.stats dd {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+}
