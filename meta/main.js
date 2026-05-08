@@ -101,7 +101,7 @@ function renderScatterPlot(data, commits) {
   const width = 1000;
   const height = 600;
 
-  const margin = { top: 10, right: 10, bottom: 30, left: 40 };
+  const margin = { top: 30, right: 40, bottom: 30, left: 60 };
 
   const usableArea = {
     top: margin.top,
@@ -145,7 +145,7 @@ function renderScatterPlot(data, commits) {
   const rScale = d3
     .scaleSqrt()
     .domain([minLines, maxLines])
-    .range([2, 30]);
+    .range([2, 20]);
 
   const sortedCommits = d3.sort(commits, d => -d.totalLines);
 
