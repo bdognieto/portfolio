@@ -283,3 +283,13 @@ circle:hover {
 circle.selected {
   fill: #ff6b6b;
 }
+
+.time-filter {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+#commit-time {
+  margin-left: auto;
+}
