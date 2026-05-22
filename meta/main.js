@@ -44,7 +44,7 @@ function processCommits(data) {
 }
 
 function renderCommitInfo(data, commits) {
-  const dl = d3.select('#stats').append('dl').attr('class', 'stats');
+  const dl = d3.select('#stats').html('').append('dl').attr('class', 'stats');
 
   dl.append('dt').html('Total <abbr title="Lines of code">LOC</abbr>');
   dl.append('dd').text(data.length);
@@ -384,6 +384,7 @@ function onTimeSliderChange() {
   filteredCommits = commits.filter(d => d.datetime <= commitMaxTime);
   updateScatterPlot(data, filteredCommits);
   updateFileDisplay(filteredCommits);
+  renderCommitInfo(data, filteredCommits);
 }
 
 timeSlider.addEventListener('input', onTimeSliderChange);
