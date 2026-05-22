@@ -286,10 +286,14 @@ circle.selected {
 
 .time-filter {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   gap: 1rem;
 }
 
-#commit-time {
+#commit-progress {
+  flex: 1;
+}
+
+#commit-time-display {
   margin-left: auto;
 }
