@@ -328,6 +328,31 @@ function updateScatterPlot(data, commits) {
     });
 }
 
+function updateFileDisplay(commits) {
+  let lines = commits.flatMap(d => d.lines);
+
+  let files = d3
+    .groups(lines, d => d.file)
+    .map(([name, lines]) => {
+      return { name, lines };
+    });
+
+  let filesContainer = d3
+    .select('#files')
+    .selectAll('div')
+    .data(files, d => d.name)
+    .join(
+      enter =>
+        enter.append('div').call(div => {
+          div.append('dt').append('code');
+          div.append('dd');
+        })
+    );
+
+  filesContainer.select('dt > code').text(d => d.name);
+  filesContainer.select('dd').text(d => `${d.lines.length} lines`);
+}
+
 let data = await loadData();
 let commits = processCommits(data);
 
@@ -358,6 +383,7 @@ function onTimeSliderChange() {
 
   filteredCommits = commits.filter(d => d.datetime <= commitMaxTime);
   updateScatterPlot(data, filteredCommits);
+  updateFileDisplay(filteredCommits);
 }
 
 timeSlider.addEventListener('input', onTimeSliderChange);
