@@ -309,17 +309,13 @@ circle.selected {
   border-radius: 50%;
 }
 
-dd {
+#files dd {
   grid-column: 2;
-
   display: flex;
   flex-wrap: wrap;
-
   align-items: start;
   align-content: start;
-
   gap: 0.15em;
-
   padding-top: 0.6em;
   margin-left: 0;
 }
